@@ -27,7 +27,7 @@ public class GlobalExceptionHandler {
     handleEmailAlreadyExistsException(EmailAlreadyExistsException ex){
 
         Map<String, String> errors = new HashMap<>();
-
-        return null;
+        errors.put("message", "Email address already exists");
+        return ResponseEntity.badRequest().body(errors);
     }
 }
