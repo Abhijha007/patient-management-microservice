@@ -9,6 +9,7 @@ import com.pm.patient_service.repository.PatientRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class PatientService {
@@ -36,5 +37,10 @@ public class PatientService {
                 .toModel(patientRequestDTO));
 
         return PatientMapper.toDTO(newPatient);
+    }
+
+    public PatientResponseDTO updatePatient(UUID id, PatientRequestDTO patientRequestDTO){
+        Patient patient = patientRepository.findById(id).orElseThrow(()-> new PatientNotFoundException("Patient Not found with ID: ", id));
+        return null;
     }
 }
