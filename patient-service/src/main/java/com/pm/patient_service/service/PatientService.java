@@ -41,7 +41,7 @@ public class PatientService {
     }
 
     public PatientResponseDTO updatePatient(UUID id, PatientRequestDTO patientRequestDTO){
-        Patient patient = patientRepository.findById(id).orElseThrow(()-> new PatientNotFoundException("Patient Not found with ID: ", id));
+        Patient patient = patientRepository.findById(id).orElseThrow(()-> new PatientNotFoundException("Patient Not found with ID: "+ id));
         return null;
     }
 }
