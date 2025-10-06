@@ -49,6 +49,8 @@ public class PatientService {
         }
 
         patient.setName(patientRequestDTO.getName());
+        patient.setAddress(patientRequestDTO.getAddress());
+        patient.setEmail(patientRequestDTO.getEmail());
 
         return null;
     }
