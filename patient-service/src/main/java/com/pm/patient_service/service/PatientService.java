@@ -54,6 +54,7 @@ public class PatientService {
         patient.setEmail(patientRequestDTO.getEmail());
         patient.setDateOfBirth(LocalDate.parse(patientRequestDTO.getDateOfBirth()));
 
-        return null;
+        Patient updatePatient = patientRepository.save(patient);
+        return PatientMapper.toDTO(updatePatient);
     }
 }
