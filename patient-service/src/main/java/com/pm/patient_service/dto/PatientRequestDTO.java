@@ -60,7 +60,7 @@ public class PatientRequestDTO {
         return registeredDate;
     }
 
-    public void setRegisteredDate(@NotNull(message = "Registered date is required") String registeredDate) {
+    public void setRegisteredDate(String registeredDate) {
         this.registeredDate = registeredDate;
     }
 }
