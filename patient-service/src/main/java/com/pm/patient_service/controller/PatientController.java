@@ -14,7 +14,8 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/patients")   //http://localhost:4000/patients
+@RequestMapping("/patients")//http://localhost:4000/patients
+
 public class PatientController {
 
     private final PatientService patientService;
